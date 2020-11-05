@@ -93,10 +93,13 @@ if ! shopt -oq posix; then
 fi
 
 # GAUSSIAN 16
-    GAUSS_SCRDIR=/home/sasha/SCRDIR
+    GAUSS_SCRDIR=/home/sasha/SCRDIR/gau
     g16root=/opt
     export GAUSS_SCRDIR g16root
     source $g16root/g16/bsd/g16.profile
+
+# QCHEM
+    . /opt/qchem/qcenv.sh
 
 # INTEL COMPILERS 
     . /opt/intel/parallel_studio_xe_2020.2.108/bin/psxevars.sh
@@ -108,6 +111,8 @@ fi
     export FCOMP=ifort
     export EDITOR='vi'
     export VISUAL='vi'
+    export NODESCRATCH=~/SCRDIR # Slurm does not understand bash variables like
+                                # ~ inside quotes.
 
 # TERACHEM
     export TeraChem=/opt/TeraChem
