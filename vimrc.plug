@@ -1,0 +1,34 @@
+" Adding vim-plug
+call plug#begin('~/.vim/plugged')
+    Plug 'lervag/vimtex'
+    Plug 'itchyny/lightline.vim'
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+    Plug 'vimwiki/vimwiki'
+call plug#end()
+
+" VimWiki
+
+" Lightline plugin
+set laststatus=2
+set noshowmode
+set ttimeout ttimeoutlen=50
+if !has('gui_running')
+    set t_Co=256
+endif
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ }
+
+" Vimtex
+let g:tex_flavor = 'latex'
+if system('uname -s') == "Darwin\n"
+    " let g:vimtex_view_method = 'zathura'
+else
+    let g:vimtex_view_method = 'mupdf'
+endif
+let g:vimtex_quickfix_mode=0
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
