@@ -106,6 +106,8 @@ fi
     export BINPATH=~/.bin
     export PATH=$PATH:/home/sasha/.bin
     export FCOMP=ifort
+    export EDITOR='vi'
+    export VISUAL='vi'
 
 # TERACHEM
     export TeraChem=/opt/TeraChem
