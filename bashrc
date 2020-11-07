@@ -132,3 +132,24 @@ export TERM=xterm-256color
         . ~/.bash_nnn
     fi
 
+# Fuzzy finder
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+    export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+    export FZF_DEFAULT_OPTS=$( tr -d $'\n' <<< "
+            --layout=reverse --border --info inline --no-mouse" ) 
+    # Use ~~ as the trigger sequence instead of the default **
+    export FZF_COMPLETION_TRIGGER='~~'
+
+    # Options to fzf command
+    export FZF_COMPLETION_OPTS='+c -x'
+
+    # Use fd instead of the default find
+    # command for listing path candidates.
+    _fzf_compgen_path() {
+      fd --hidden --follow --exclude ".git" . "$1"
+    }
+
+    # Use fd to generate the list for directory completion
+    _fzf_compgen_dir() {
+      fd --type d --hidden --follow --exclude ".git" . "$1"
+    }
