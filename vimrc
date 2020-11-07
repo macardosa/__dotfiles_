@@ -39,6 +39,8 @@ set directory=~/.vim/swap//
 set backupdir=~/.vim/backup//
 set undodir=~/.vim/undo//
 
+"  Mappings
+nmap <leader>ff :FZF<CR>
 " Unconscious settings
 set spell spelllang=en_us
 set modelines=0

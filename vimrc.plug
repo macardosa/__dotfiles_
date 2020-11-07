@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'vimwiki/vimwiki'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 " VimWiki
