@@ -39,6 +39,11 @@ endif
 "set backupdir=~/.vim/backup//
 "set undodir=~/.vim/undo//
 
+" Fortran
+let fortran_do_enddo=1
+let fortran_more_precise=1
+let fortran_have_tabs=1
+
 "  Mappings
 nmap <leader>ff :FZF<CR>
 " Unconscious settings
