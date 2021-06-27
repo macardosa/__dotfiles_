@@ -105,10 +105,10 @@ fi
     . /opt/intel/parallel_studio_xe_2020.2.108/bin/psxevars.sh
     
 # MY ENV VARIABLES
-    export CCOMP=icc
+    export CC=icc
     export BINPATH=~/.bin
     export PATH=$PATH:/home/sasha/.bin
-    export FCOMP=ifort
+    export FC=ifort
     export EDITOR='vi'
     export VISUAL='vi'
     export NODESCRATCH=~/SCRDIR # Slurm does not understand bash variables like

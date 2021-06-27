@@ -1,6 +1,6 @@
-# This is a file to put environent conf for NNN file manager
+# This is a file to put environment configurations for NNN file manager
 # configuring cd on exit
-n ()
+n()
 {
     # Block nesting of nnn in subshells
     if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then

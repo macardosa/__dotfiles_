@@ -31,4 +31,3 @@ alias sgau=~/.bin/submit_gaussian.sh
 alias sqchem=~/.bin/submit_qchem.sh
 alias smolpro=~/.bin/submit_molpro.sh
 alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-alias n='nnn -d'
