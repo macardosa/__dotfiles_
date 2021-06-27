@@ -132,6 +132,8 @@ export TERM=xterm-256color
         . ~/.bash_nnn
     fi
 
+    export NNN_OPENER=xdg-open
+
 # Fuzzy finder
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
     export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
@@ -153,3 +155,8 @@ export TERM=xterm-256color
     _fzf_compgen_dir() {
       fd --type d --hidden --follow --exclude ".git" . "$1"
     }
+# Newton-X
+export NX=/opt/NX
+
+# SHARC
+export SHARC=/opt/sharc/bin

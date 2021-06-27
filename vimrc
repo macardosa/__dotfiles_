@@ -35,9 +35,9 @@ else
 endif
 
 " Managing temporary files
-set directory=~/.vim/swap//
-set backupdir=~/.vim/backup//
-set undodir=~/.vim/undo//
+"set directory=~/.vim/swap//
+"set backupdir=~/.vim/backup//
+"set undodir=~/.vim/undo//
 
 "  Mappings
 nmap <leader>ff :FZF<CR>

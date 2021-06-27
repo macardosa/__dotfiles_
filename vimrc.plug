@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'vim-pandoc/vim-pandoc'
     Plug 'vim-pandoc/vim-pandoc-syntax'
+    Plug 'tpope/vim-commentary'
+    Plug 'mcchrish/nnn.vim'
 call plug#end()
 
 " VimWiki
