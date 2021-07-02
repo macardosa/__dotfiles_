@@ -93,8 +93,8 @@ if ! shopt -oq posix; then
 fi
 
 # GAUSSIAN 16
-    GAUSS_SCRDIR=/home/sasha/SCRDIR/gau
-    g16root=/opt
+    GAUSS_SCRDIR=/backup/manuel/SCRDIR/gaussian
+    g16root=/opt/gaussian
     export GAUSS_SCRDIR g16root
     source $g16root/g16/bsd/g16.profile
 
@@ -156,7 +156,27 @@ export TERM=xterm-256color
       fd --type d --hidden --follow --exclude ".git" . "$1"
     }
 # Newton-X
-export NX=/opt/NX
+export NX=/opt/NX/bin
 
 # SHARC
 export SHARC=/opt/sharc/bin
+
+# NEXMD
+alias nexmd=/opt/NEXMD/nexmd.exe
+alias getexcited=/opt/NEXMD/getexcited/getexcited.py
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
