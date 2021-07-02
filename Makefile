@@ -1,4 +1,4 @@
-list=bashrc bash_aliases bash_nnn vimrc vimrc.plug zathurarc
+list=bashrc bash_aliases bash_nnn vimrc vimrc.plug zathurarc bash_profile
 UNAME_S := $(shell uname -s)
 
 ifneq ($(UNAME_S),Linux)
